@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form id="form_goto">
+            <input id="input_url" type="url" />
+            <button type="submit">Go</button>
+        </form>
+
+        <script>
+            var form = document.getElementById('form_goto');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var url = document.getElementById('input_url').value;
+                window.open(url);
+            });
+
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+            function onDeviceReady() {
+                if( cordova && cordova.InAppBrowser ){
+                    window.open = cordova.InAppBrowser.open;
+                }
+            }
+        </script>
+    </body>
+</html>

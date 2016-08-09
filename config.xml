@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.websterbank.embedded-browser-example"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Inapp Browser Test</name>
+
+  <description>
+      Open an in-app browser to any destination - for testing purposes
+  </description>
+
+  <author href="" email="tom.pietrosanti@gmail.com">
+      Tom Pietrosanti
+  </author>
+
+  <plugin name="cordova-plugin-inappbrowser" />
+</widget>
